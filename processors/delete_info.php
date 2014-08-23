@@ -4,8 +4,7 @@ include './lib/functions.php';
 include './lib/database.php';
 check_login();
 
-$id = mysql_real_escape_string($_POST['id']);
-$id = preg_replace('/\s+/', '', $id);
+$id = trim(mysql_real_escape_string($_POST['id']));
 
 echo $query = "delete from informations where id = $id";
 

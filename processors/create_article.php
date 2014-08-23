@@ -3,12 +3,10 @@ include './lib/functions.php';
 include './lib/database.php';
 check_login();
 
-$title = mysql_real_escape_string($_POST['article_title']);
-$body = mysql_real_escape_string($_POST['article_body']);
+$title = trim(mysql_real_escape_string($_POST['article_title']));
+$body = trim(mysql_real_escape_string($_POST['article_body']));
 $datetime = mysql_real_escape_string($_POST['article_datetime']);
 
-$title = preg_replace('/\s+/', '', $title);
-$body = preg_replace('/\s+/', '', $body);
 $filename = '';
 $filext = '';
 

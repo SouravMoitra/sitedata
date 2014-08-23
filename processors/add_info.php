@@ -5,8 +5,7 @@ include './lib/database.php';
 
 check_login();
 
-$info = mysql_real_escape_string($_POST['info']);
-$info = preg_replace('/\s+/', '', $info);
+$info = trim(mysql_real_escape_string($_POST['info']));
 
 $query = "insert into informations (user_id, info) values (1, '$info')";
 

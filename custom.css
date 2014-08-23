@@ -110,3 +110,6 @@ footer a {
 .input-maximize {
     width: 72%
 }
+.information-container {
+    border: 1px solid black;
+}
